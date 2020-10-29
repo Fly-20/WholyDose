@@ -1,0 +1,99 @@
+{% comment %}
+{% if section.settings.fullbanner != empty %}
+<div class="full-banner">
+  <img src="{{ section.settings.fullbanner | img_url: '3000x' }}" style="display:block; width: 100%;">
+</div>
+{% endif %}
+{% endcomment %}
+
+
+<div class="story-content cf ">
+  <h1>{{ section.settings.storytitle }}</h1>
+  <div class="copy">{{ section.settings.storycontent }}</div>
+</div>
+
+<div class="video" style="display: block; width: 100%;">
+  <video muted autoplay loop playsinline webkit-playsinline style="width: 100%; display: block;">
+  <source src="{{ section.settings.videourlwebm }}"  type='video/webm;codecs="vp8, vorbis"'/>
+  <source src="{{ section.settings.videourlmp }}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
+  </video>
+</div>
+
+<div class="story-content cf">
+  <h1>{{ section.settings.storytitle2 }}</h1>
+  <div class="copy">{{ section.settings.storycontent2 }}</div>
+</div>
+
+<div class="full-banner">
+  <img src="{{ section.settings.fullbanner2 | img_url: '3000x' }}" style="display:block; width: 100%;">
+</div>
+
+<div class="story-content cf">
+  <h1>{{ section.settings.storytitle3 }}</h1>
+  <div class="copy">{{ section.settings.storycontent3 }}</div>
+</div>
+
+
+<iframe style="display:block; width: 100% !important;" width="560" height="315" src="https://www.youtube.com/embed/JJaQ1z3z23U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+{% schema %}
+{
+  "name": "Story Page Content",
+  "settings": [
+    {
+      "id": "fullbanner",
+      "type": "image_picker",
+      "label": "Full Banner"
+    },
+    {
+      "type": "text",
+      "id": "storytitle",
+      "label": "Story title"
+    },
+    {
+      "type": "html",
+      "id": "storycontent",
+      "label": "Story Content"
+    },
+    {
+      "type": "text",
+      "id": "videourlwebm",
+      "label": "Video url for WEBM"
+    },
+    {
+      "type": "text",
+      "id": "videourlmp",
+      "label": "Video url for Mp4"
+    },
+    {
+      "type": "text",
+      "id": "storytitle2",
+      "label": "Story title2 "
+    },
+    {
+      "type": "html",
+      "id": "storycontent2",
+      "label": "Story Content 2"
+    },
+    {
+      "id": "fullbanner2",
+      "type": "image_picker",
+      "label": "Full Banner 2"
+    },
+    {
+      "type": "text",
+      "id": "storytitle3",
+      "label": "Story title3"
+    },
+    {
+      "type": "html",
+      "id": "storycontent3",
+      "label": "Story Content 3"
+    }
+  ]
+}
+{% endschema %}

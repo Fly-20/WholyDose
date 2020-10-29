@@ -1,0 +1,34 @@
+
+
+<div class="full-width-banner">
+
+    <img class="new-banner-desktop" src="{{ section.settings.topbannerdesktop | img_url: '2000x' }}">
+    <img class="new-banner-mobile" src="{{ section.settings.topbannermobile | img_url: '1000x' }}">
+
+</div> 
+
+
+
+{% schema %}
+  {
+    "name": "Full Width Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "topbannerdesktop",
+        "label": "Top Banner Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "topbannermobile",
+        "label": "Top Banner Mobile"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Full Width Banner",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

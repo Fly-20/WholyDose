@@ -1,0 +1,128 @@
+<div class="homepage-results cf" style="background-color: {{ section.settings.bgcolor }}">
+  <div class="wrapper">
+    <div class="titles">
+      <h1 class="headers-custom" style="color: {{ section.settings.textcolor }};">{{ section.settings.callouttitle }}</h1>
+      {% if section.settings.calloutsubtitle  != blank %}<p style="color: {{ section.settings.textcolor }};">{{ section.settings.calloutsubtitle }}</p>{% endif %}
+    </div>
+
+    <!-- Flickity HTML init -->
+    <div class="carousel results-slider">
+      {% if section.settings.slide1  != blank %}
+      <div class="carousel-cell">
+        <img src="{{ section.settings.slide1  | img_url: '1200x'  }}" />
+      </div>
+      {% endif %}
+      {% if section.settings.slide2  != blank %}
+      <div class="carousel-cell">
+        <img src="{{ section.settings.slide2  | img_url: '1200x'  }}" />
+      </div>
+      {% endif %}
+      {% if section.settings.slide3  != blank %}
+      <div class="carousel-cell">
+        <img src="{{ section.settings.slide3  | img_url: '1200x'  }}" />
+      </div>
+      {% endif %}
+      {% if section.settings.slide4  != blank %}
+      <div class="carousel-cell">
+        <img src="{{ section.settings.slide4  | img_url: '1200x'  }}" />
+      </div>
+      {% endif %}
+      {% if section.settings.slide5  != blank %}
+      <div class="carousel-cell">
+        <img src="{{ section.settings.slide5  | img_url: '1200x'  }}" />
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="copy-area ">
+      {% if section.settings.resultstitle  != blank %}
+      <h1 class="headers-custom-2">{{ section.settings.resultstitle }}</h1>
+      <p>{{ section.settings.resultssubtitle }}</p>
+      <a href="{{ section.settings.btnlink }}" class="btn">
+        {{ section.settings.btncopy }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Homepage Results mcs",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "Section bg color"
+      },
+      {
+        "type": "color",
+        "id": "textcolor",
+        "label": "Section text color"
+      },
+      {
+        "type": "text",
+        "id": "callouttitle",
+        "label": "Callout title"
+      },
+      {
+        "type": "html",
+        "id": "calloutsubtitle",
+        "label": "Callout sub title"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide1",
+        "label": "Slide 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide2",
+        "label": "Slide 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide3",
+        "label": "Slide 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide4",
+        "label": "Slide 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide5",
+        "label": "Slide 5"
+      },
+      {
+        "type": "text",
+        "id": "resultstitle",
+        "label": "Results title"
+      },
+      {
+        "type": "html",
+        "id": "resultssubtitle",
+        "label": "Results sub title"
+      },
+      {
+        "type": "text",
+        "id": "btncopy",
+        "label": "Btn copy"
+      },
+      {
+        "type": "url",
+        "id": "btnlink",
+        "label": "Btn link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Homepage Results Slider-mcs",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

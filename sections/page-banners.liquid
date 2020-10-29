@@ -1,0 +1,60 @@
+{% for block in section.blocks %}
+	{% if page.handle == block.settings.page %}
+    <div class="page-banner page-banner-{{ page.handle }}">
+      <img src="{{ block.settings.image | img_url: '2000x' }}">
+      <div class="page-banner-copy">
+      <h1>{{ block.settings.btitle }}</h1>
+      <p class="subheaders-custom">{{ block.settings.bsub}}</p>
+      </div>
+    </div>
+	{% endif %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Page Featured Images",
+	"max_blocks": 10,
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Featured Image",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+       		"label": "Page Featured Image"
+        },
+        {
+          "id": "page",
+          "type": "page",
+       		"label": "Select Page for Image"
+        },
+        {
+          "id": "btitle",
+          "type": "text",
+          "label": "Banner title"
+        },
+        {
+          "id": "bsub",
+          "type": "text",
+          "label": "Banner subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Featured Images",
+      "category": "images",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,73 @@
+<div class="rev-home-blocks cf">
+
+	{% for block in section.blocks %}
+		
+		<a class="rev-block" href="{{ block.settings.link }}">
+      <div class="bg-img" style="background: url({{ block.settings.bg | img_url: '900x' }}) center center; background-size: cover;">
+  		  <div class="rev-block-copy vertical">
+          <h1>{{ block.settings.blocktitle }}</h1>
+          <p>{{ block.settings.linktext }}</p>
+  		  </div>
+      </div>
+		</a>
+
+	{% endfor %}
+
+</div>
+
+
+{% schema %}
+{
+  "name": "CTA Blocks",
+	"max_blocks": 4,
+  "settings": [
+    {
+      "id": "imgdivier",
+      "type": "image_picker",
+      "label": "Divider img"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Add Block",
+      "settings": [
+      	{
+					"id": "bg",
+          "type": "image_picker",
+       		"label": "BG IMG"
+      	},
+        {
+          "id": "link",
+          "type": "url",
+       		"label": "Block link"
+        },
+        {
+          "id": "blocktitle",
+          "type": "text",
+          "label": "Block Title"
+        },
+        {
+          "id": "linktext",
+          "type": "text",
+          "label": "Link text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action Blocks",
+      "category": "CTA button",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
