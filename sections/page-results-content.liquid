@@ -1,0 +1,105 @@
+<div class="wrapper">
+	{% for block in section.blocks %}
+		{% case block.type %}
+			{% when 'text' %}
+            <div class="results-block-text">
+              <h1 class="subheaders-custom-3">{{ block.settings.texttitle }}</h1>
+              <div class="rte">{{ block.settings.text }}</div>
+            </div>
+			{% when 'title' %}
+				<h2 class="results-block-title">{{ block.settings.title }}</h2>
+			{% when 'one_image' %}
+				<img src="{{ block.settings.oneimage | img_url: '800x' }}" alt="" class="results-image">
+				<div class="results-image-caption">{{ block.settings.imagecaption }}</div>
+			{% when 'two_images' %}
+				<div class="results-image-left">
+					<img src="{{ block.settings.leftimage | img_url: '800x' }}" alt="">
+					<div class="results-image-caption">{{ block.settings.leftimagecaption }}</div>
+				</div>
+				<div class="results-image-right">
+					<img src="{{ block.settings.rightimage | img_url: '800x' }}" alt="">
+					<div class="results-image-caption">{{ block.settings.rightimagecaption }}</div>
+				</div>
+				<div class="cf"></div>
+		{% endcase %}
+	{% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Results Content",
+  "class": "page-result-content",
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "id": "texttitle",
+          "type": "text",
+          "label": "Text title"
+        },
+        {
+          "id": "text",
+          "type": "richtext",
+       		"label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "name": "Section Title",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+       		"label": "Section Title"
+        }
+      ]
+    },
+    {
+      "type": "one_image",
+      "name": "Image with Caption",
+      "settings": [
+        {
+          "id": "oneimage",
+          "type": "image_picker",
+       		"label": "Image"
+        },
+        {
+          "id": "imagecaption",
+          "type": "richtext",
+       		"label": "Image Caption"
+        }
+      ]
+    },
+    {
+      "type": "two_images",
+      "name": "Side by Side Images",
+      "settings": [
+        {
+          "id": "leftimage",
+          "type": "image_picker",
+       		"label": "Left Image"
+        },
+        {
+          "id": "leftimagecaption",
+          "type": "richtext",
+       		"label": "Left Image Caption"
+        },
+        {
+          "id": "rightimage",
+          "type": "image_picker",
+       		"label": "Right Image"
+        },
+        {
+          "id": "rightimagecaption",
+          "type": "richtext",
+       		"label": "Right Image Caption"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

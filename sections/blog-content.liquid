@@ -1,0 +1,37 @@
+{% assign article = articles[section.settings.article] %}
+
+
+<div class="wrapper">
+	<div class="blog-featured-post">
+		<div class="featured-blog-col">
+			<div class="featured-post-img" style="background: url('{{ article.image | img_url: '720x' }}') no-repeat center center; background-size: cover;"></div>
+		</div>
+		<div class="featured-blog-col contentcol">
+			
+			<h6>FEATURED POST</h6>
+			<h2>{{ article.title }}</h2>
+			<p>{{ article.excerpt }}</p>
+			<a class="read-more" href="{{ article.url }}">Read More <span class="icon icon-arrow-right"></span></a>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+{% schema %}
+{
+	"settings": [
+		{
+			"type": "article",
+	    "id": "article",
+	    "label": "Featured Post"
+	  }
+	]
+}
+{% endschema %}

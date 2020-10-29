@@ -1,0 +1,88 @@
+{% for block in section.blocks %}
+  {% if collection.handle == block.settings.coll %}
+
+    {% if block.settings.topbannerdesktop != blank %}
+    <div class="homepage-banner" style="border-bottom: 1px solid #eee;">
+
+      <div class="banner top-banner desktop" style="position:relative;">
+        <img class="new-banner-desktop" src="{{ block.settings.topbannerdesktop | img_url: 'master', scale:2 }}">
+        <img class="new-banner-mobile" src="{{ block.settings.topbannermobile | img_url: 'master', scale:2 }}">
+        {% if block.settings.topbannertitle != blank %}
+        <div class="vertical">
+          <h1 class="waypoint fade-in" style="color: {{ block.settings.copycolor }};">{{ block.settings.topbannertitle }}</h1>
+          {% if block.settings.copy != blank %}<p class="subheaders-custom" style="color: {{ block.settings.copycolor }};">{{ block.settings.copy }}</p>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+    {% endif %}
+
+  {% endif %}
+{% endfor %}
+
+
+
+
+{% schema %}
+{
+  "name": "Collection Banners",
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Banner Content",
+      "settings": [
+        {
+          "id": "coll",
+          "type": "collection",
+          "label": "Select Collection for Banner"
+        },
+        {
+          "type": "image_picker",
+          "id": "topbannerdesktop",
+          "label": "Top Banner Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "topbannermobile",
+          "label": "Top Banner Mobile"
+        },
+        {
+          "type": "text",
+          "id": "topbannertitle",
+          "label": "Top Banner Title"
+        },
+        {
+          "type": "html",
+          "id": "copy",
+          "label": "Top Banner Cop"
+        },
+        {
+          "type": "color",
+          "id": "copycolor",
+          "label": "Color for text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Banners",
+      "category": "images",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+{% endschema %}
+

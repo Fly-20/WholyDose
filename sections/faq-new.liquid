@@ -1,0 +1,229 @@
+
+
+{% comment %}<div class="page-banner">
+  <img src="{{ section.settings.fullbanner | img_url: '3000x' }}" style="display:block; position: relative; " />
+  <div class="page-banner-copy">
+    
+  </div>
+</div>
+{% endcomment %}
+
+<h1 style="text-align:center; padding-top: 60px;">{{ section.settings.pagetitle }}</h1>
+
+<div class="faq-content-wrap faq-blocks cf"> 
+
+
+
+  <div class="faq-block">
+    <h1>{{ section.settings.block1title }}</h1>
+    {% comment %}<div class="divide"></div>{% endcomment %}
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'products' %}
+          <div class="faq-box">
+            <h2 class="title waypoint">{{ block.settings.faqq }}</h2>
+            <div class="content">
+              {{ block.settings.faqa }}
+            </div>
+          </div>
+        {% endcase %}
+     
+    {% endfor %}
+
+    
+  </div>
+
+   <div class="faq-block odd ">
+    <h1>{{ section.settings.block2title }}</h1>
+    {% comment %}<div class="divide"></div>{% endcomment %}
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'shipping' %}
+          <div class="faq-box">
+            <h2 class="title">{{ block.settings.faqq }}</h2>
+            <div class="content">
+              {{ block.settings.faqa }}
+            </div>
+          </div>
+        {% endcase %}
+     
+    {% endfor %}
+
+    <h1>{{ section.settings.block3title }}</h1>
+    {% comment %}<div class="divide"></div>{% endcomment %}
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'returns' %}
+          <div class="faq-box">
+            <h2 class="title">{{ block.settings.faqq }}</h2>
+            <div class="content">
+              {{ block.settings.faqa }}
+            </div>
+          </div>
+        {% endcase %}
+     
+    {% endfor %}
+
+    <h1>{{ section.settings.block4title }}</h1>
+    {% comment %}<div class="divide"></div>{% endcomment %}
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'covid' %}
+          <div class="faq-box">
+            <h2 class="title">{{ block.settings.faqq }}</h2>
+            <div class="content">
+              {{ block.settings.faqa }}
+            </div>
+          </div>
+        {% endcase %}
+     
+    {% endfor %}
+  </div>
+
+
+</div>
+
+
+<div class="still cf">
+  {{ section.settings.still }}
+</div>
+
+
+
+<div class="ziz-related cf" style="padding: 90px 0 60px;">
+  <h2 style="margin: 0; padding: 0; font-weight: 400;">{{ section.settings.upselltext }}</h2>
+  {% for product in collections[section.settings.upsell].products limit: 4 %}
+    
+    <a href="{{ product.url }}" class="prod-box">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="{{ product.featured_image.alt | escape }}">
+      <h1>{{ product.title }}</h1>
+    </a>
+
+  {% endfor %}
+</div>
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+     "id": "pagetitle",
+      "type": "html",
+      "label": "Page Title"
+    },
+    {
+      "id": "fullbanner",
+      "type": "image_picker",
+      "label": "Full Banner"
+    },
+    {
+     "id": "block1title",
+      "type": "text",
+      "label": "Block 1 tite"
+    },
+    {
+     "id": "block2title",
+      "type": "text",
+      "label": "block 2 title"
+    },
+    {
+     "id": "block3title",
+      "type": "text",
+      "label": "block 3 title"
+    },
+    {
+     "id": "block4title",
+      "type": "text",
+      "label": "block 4 title"
+    },
+    {
+     "id": "still",
+      "type": "html",
+      "label": "Still Have Q's"
+    },
+    {
+     "id": "upselltext",
+      "type": "html",
+      "label": "Text for upsell"
+    },
+    {
+      "id": "upsell",
+      "type": "collection",
+      "label": "Choose an upsell Collection"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "products",
+      "name": "FQ Block1",
+      "settings": [
+          {
+          "id": "faqq",
+          "type": "text",
+          "label": "FAQ Question"
+        },
+        {
+          "id": "faqa",
+          "type": "richtext",
+          "label": "FAQ Answer"
+        }
+      ]
+    },
+    {
+      "type": "shipping",
+      "name": "FAQ Block2",
+      "settings": [
+          {
+          "id": "faqq",
+          "type": "text",
+          "label": "FAQ Question"
+        },
+        {
+          "id": "faqa",
+          "type": "richtext",
+          "label": "FAQ Answer"
+        }
+      ]
+    },
+    {
+      "type": "returns",
+      "name": "FAQ Block3",
+      "settings": [
+          {
+          "id": "faqq",
+          "type": "text",
+          "label": "FAQ Question"
+        },
+        {
+          "id": "faqa",
+          "type": "richtext",
+          "label": "FAQ Answer"
+        }
+      ]
+    },
+    {
+      "type": "covid",
+      "name": "FAQ Block4",
+      "settings": [
+          {
+          "id": "faqq",
+          "type": "text",
+          "label": "FAQ Question"
+        },
+        {
+          "id": "faqa",
+          "type": "richtext",
+          "label": "FAQ Answer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+

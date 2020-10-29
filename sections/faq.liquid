@@ -1,0 +1,84 @@
+
+
+<div class="page-banner">
+  <img src="{{ section.settings.fullbanner | img_url: '3000x' }}" style="display:block; position: relative; " />
+  <div class="page-banner-copy">
+    <h1>{{ section.settings.pagetitle }}</h1>
+  </div>
+</div>
+
+
+
+
+
+<div class="faq-content-wrap">
+
+{% for block in section.blocks %}
+  
+  <div class="faq-content cf ">
+    {% if block.settings.sectiontitle != empty %}
+      <h2>{{ block.settings.sectiontitle }}</h2>
+    {% endif %}
+    <h1>{{ block.settings.blocktitle }}</h1>
+    <div class="copy">{{ block.settings.blocktext }}</div>
+  </div>
+
+{% endfor %}
+
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "FAQ Blocks",
+  "max_blocks": 20,
+  "settings": [
+    {
+         "id": "pagetitle",
+          "type": "html",
+          "label": "Page Title"
+    },
+    {
+      "id": "fullbanner",
+      "type": "image_picker",
+      "label": "Full Banner"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Add FAQ Block",
+      "settings": [
+        {
+          "id": "sectiontitle",
+          "type": "text",
+          "label": "Section Title"
+        },
+        {
+          "id": "blocktitle",
+          "type": "html",
+          "label": "Block Title"
+        },
+        {
+          "id": "blocktext",
+          "type": "html",
+          "label": "Block Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Blocks",
+      "category": "FAQ Blocks",
+      "blocks": [
+        { 
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

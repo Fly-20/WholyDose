@@ -1,0 +1,421 @@
+<div class="science-area">
+
+    {% for block in section.blocks %}
+    {% if product.handle == block.settings.theproduct %}
+
+      
+      <div class="science-info">
+        <h1>THE SCIENCE</h1>
+
+        {% if block.settings.sciencehtml  != blank %}
+          <div style="padding: 15px 0;">{{ block.settings.sciencehtml }}</div>
+        {% endif %}
+
+
+        {% if block.settings.icon1  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon1 | img_url: '300x' }}">
+            <h1>{{ block.settings.icon1title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon2  != blank %}
+          <div class="icon" style="padding-left: 3px;">
+            <img src="{{ block.settings.icon2 | img_url: '300x' }}">
+            <h1>{{ block.settings.icon2title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon3  != blank %}
+          <div class="icon" style="padding-left: 3px;">
+            <img src="{{ block.settings.icon3 | img_url: '300x' }}">
+            <h1>{{ block.settings.icon3title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon4  != blank %}
+          <div class="icon" style="padding-left: 3px;">
+            <img src="{{ block.settings.icon4 | img_url: '300x' }}">
+            <h1>{{ block.settings.icon4title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon5  != blank %}
+          <div class="icon" style="padding-left: 5px;">
+            <img src="{{ block.settings.icon5 | img_url: '300x' }}">
+            <h1>{{ block.settings.icon5title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon6  != blank %}
+          <div class="icon">
+			<img style="margin-top: -8px;" src="{{ block.settings.icon6 | img_url: '300x' }}" >
+            <h1>{{ block.settings.icon6title }}</h1>
+          </div>
+          {% endif %}
+
+      </div>
+
+      <div class="science-img">
+        <img  src="{{ block.settings.scienceimg | img_url: '1200x' }}">
+      </div>
+
+
+    {% endif %}
+  {% endfor %}
+
+
+</div>
+
+
+<div class="zizia-icons" style="display:none;">
+    {% for block in section.blocks %}
+      {% if product.handle == block.settings.theproduct %}
+
+          <h2>{{ block.settings.iconstitle }}</h2>
+
+          {% if block.settings.icon1  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon1 | img_url: '600x' }}">
+            <h1>{{ block.settings.icon1title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon2  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon2 | img_url: '600x' }}">
+            <h1>{{ block.settings.icon2title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon3  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon3 | img_url: '600x' }}">
+            <h1>{{ block.settings.icon3title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon4  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon4 | img_url: '600x' }}">
+            <h1>{{ block.settings.icon4title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon5  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon5 | img_url: '600x' }}">
+            <h1>{{ block.settings.icon5title }}</h1>
+          </div>
+          {% endif %}
+
+          {% if block.settings.icon6  != blank %}
+          <div class="icon">
+            <img src="{{ block.settings.icon6 | img_url: '600x' }}">
+            <h1>{{ block.settings.icon6title }}</h1>
+          </div>
+          {% endif %}
+
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+
+
+
+
+{% for block in section.blocks %}
+  {% if product.handle == block.settings.theproduct %}
+
+  <div class="ingredients 
+  three-col
+  {% if block.settings.ingredients4  != blank %}four-col{% endif %}
+  {% if block.settings.ingredients5  != blank %}five-col{% endif %}
+  ">
+
+      {% if block.settings.ingredienttitle  != blank %}
+      <h1>{{ block.settings.ingredienttitle}}</h1>
+      {% endif %}
+      {% if block.settings.ingredientsmain  != blank %}
+      <div class="rte">{{ block.settings.ingredientsmain }}</div>
+      {% endif %}
+
+
+      {% if block.settings.ingredients1  != blank %}
+      <div class="i-block">
+        <img src="{{ block.settings.ingredients1img | img_url: '600x' }}">
+        <h2>{{ block.settings.ingredients1title }}</h2>
+        <h6>{{ block.settings.ingredients1subtitle }}</h6>
+        <div class="rte">{{ block.settings.ingredients1 }}</div>
+      </div>
+      {% endif %}
+      {% if block.settings.ingredients2  != blank %}
+      <div class="i-block">
+        <img src="{{ block.settings.ingredients2img | img_url: '600x' }}">
+        <h2>{{ block.settings.ingredients2title }}</h2>
+        <h6>{{ block.settings.ingredients2subtitle }}</h6>
+        <div class="rte">{{ block.settings.ingredients2 }}</div>
+      </div>
+      {% endif %}
+      {% if block.settings.ingredients3  != blank %}
+      <div class="i-block">
+        <img src="{{ block.settings.ingredients3img | img_url: '600x' }}">
+        <h2>{{ block.settings.ingredients3title }}</h2>
+        <h6>{{ block.settings.ingredients3subtitle }}</h6>
+        <div class="rte">{{ block.settings.ingredients3 }}</div>
+      </div>
+      {% endif %}
+      {% if block.settings.ingredients4  != blank %}
+      <div class="i-block">
+        <img src="{{ block.settings.ingredients4img | img_url: '600x' }}">
+        <h2>{{ block.settings.ingredients4title }}</h2>
+        <h6>{{ block.settings.ingredients4subtitle }}</h6>
+        <div class="rte">{{ block.settings.ingredients4 }}</div>
+      </div>
+      {% endif %}
+      {% if block.settings.ingredients5  != blank %}
+      <div class="i-block">
+        <img src="{{ block.settings.ingredients5img | img_url: '600x' }}">
+        <h2>{{ block.settings.ingredients5title }}</h2>
+        <h6>{{ block.settings.ingredients5subtitle }}</h6>
+        <div class="rte">{{ block.settings.ingredients5 }}</div>
+      </div>
+      {% endif %}
+
+
+  </div>
+
+  {% endif %}
+{% endfor %}
+
+
+
+
+
+<div class="how-to-use">
+
+
+
+  {% for block in section.blocks %}
+    {% if product.handle == block.settings.theproduct %}
+
+      <div class="how-to-img">
+        <img  src="{{ block.settings.howtoimg | img_url: '1200x' }}">
+      </div>
+      <div class="how-to-info">
+      <h1>How to use</h1>
+      <h6>{{ product.title }}</h6>
+      {% if block.settings.howto1  != blank %}
+        <li>{{ block.settings.howto1 }}</li>
+      {% endif %}
+      {% if block.settings.howto2  != blank %}
+        <li>{{ block.settings.howto2 }}</li>
+      {% endif %}
+      {% if block.settings.howto3  != blank %}
+        <li>{{ block.settings.howto3 }}</li>
+      {% endif %}
+      {% if block.settings.howto4  != blank %}
+        <li>{{ block.settings.howto4 }}</li>
+      {% endif %}
+      {% if block.settings.howto5  != blank %}
+        <li>{{ block.settings.howto5 }}</li>
+      {% endif %}
+
+      {% if block.settings.howtoextra  != blank %}
+        <div style="padding: 15px 0;">{{ block.settings.howtoextra }}</div>
+      {% endif %}
+
+      </div>
+
+      
+
+
+    {% endif %}
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="feat-blog">
+  
+  {% for block in section.blocks %}
+    {% if product.handle == block.settings.theproduct %}
+
+      <!-- Flickity HTML init -->
+      <div class="carousel blog-slider">
+
+      <div class="carousel-cell recipe-block">
+      
+        {% assign thearticle = articles[block.settings.thearticle] %}
+        <div class="meta">
+          <h1>RECIPE IDEAS</h1>
+          <h2>{{ thearticle.title }}</h2>
+          <div class="rte">
+            {% if article.excerpt == blank %}
+            {{ article.content | strip_html | truncatewords: 30 }}
+            {% else %}
+            {{ article.excerpt }}
+            {% endif %}
+          </div>
+          <a  href="{{ thearticle.url }}" class="btn readmore">GET RECIPE</a>
+        </div>
+        <div class="the-img">
+          <img src="{{ thearticle.image.src | img_url: '1200x' }}" />
+        </div>
+        
+      </div>
+
+      <div class="carousel-cell recipe-block">
+        
+        {% assign thearticle = articles[block.settings.thearticle2] %}
+        <div class="meta">
+          <h1>RECIPE IDEAS</h1>
+          <h2>{{ thearticle.title }}</h2>
+          <div class="rte">
+            {% if article.excerpt == blank %}
+            {{ article.content | strip_html | truncatewords: 30 }}
+            {% else %}
+            {{ article.excerpt }}
+            {% endif %}
+          </div>
+          <a  href="{{ thearticle.url }}" class="btn readmore">GET RECIPE</a>
+        </div>
+        <div class="the-img">
+          <img src="{{ thearticle.image.src | img_url: '1200x' }}" />
+        </div>
+      </div>
+
+      <div class="carousel-cell recipe-block">
+        {% assign thearticle = articles[block.settings.thearticle3] %}
+        <div class="meta">
+          <h1>RECIPE IDEAS</h1>
+          <h2>{{ thearticle.title }}</h2>
+          <div class="rte">
+            {% if article.excerpt == blank %}
+            {{ article.content | strip_html | truncatewords: 30 }}
+            {% else %}
+            {{ article.excerpt }}
+            {% endif %}
+          </div>
+          <a  href="{{ thearticle.url }}" class="btn readmore">GET RECIPE</a>
+        </div>
+        <div class="the-img">
+          <img src="{{ thearticle.image.src | img_url: '1200x' }}" />
+        </div>
+      </div>
+
+      </div>
+
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="before-after-container">
+  <div>
+    <h1>{{section.settings.heading}}</h1>
+  </div>
+  <div>
+  	<img src={{ section.settings.before_after_img | img_url: 'x400' }} 
+     alt={{ section.settings.before_after_img.alt }}>
+  </div>
+</div>
+
+<div class="faq-area">
+    {% for block in section.blocks %}
+    {% if product.handle == block.settings.theproduct %}
+  <h1>FREQUENTLY ASKED QUESTIONS:</h1>
+
+      {% if block.settings.q1  != blank %}
+      <div class="faq-box prod-faq">
+        <h2 class="title waypoint">{{ block.settings.q1 }}</h2>
+        <div class="content">
+          {{ block.settings.a1 }}
+        </div>
+      </div>
+      {% endif %}
+      {% if block.settings.q2  != blank %}
+      <div class="faq-box prod-faq">
+        <h2 class="title waypoint">{{ block.settings.q2 }}</h2>
+        <div class="content">
+          {{ block.settings.a2 }}
+        </div>
+      </div>
+      {% endif %}
+      {% if block.settings.q3  != blank %}
+      <div class="faq-box prod-faq">
+        <h2 class="title waypoint">{{ block.settings.q3 }}</h2>
+        <div class="content">
+          {{ block.settings.a3 }}
+        </div>
+      </div>
+      {% endif %}
+      {% if block.settings.q4  != blank %}
+      <div class="faq-box prod-faq">
+        <h2 class="title waypoint">{{ block.settings.q4 }}</h2>
+        <div class="content">
+          {{ block.settings.a4 }}
+        </div>
+      </div>
+      {% endif %}
+      {% if block.settings.q5  != blank %}
+      <div class="faq-box prod-faq">
+        <h2 class="title waypoint">{{ block.settings.q5 }}</h2>
+        <div class="content">
+          {{ block.settings.a5 }}
+        </div>
+      </div>
+      {% endif %}
+
+  {% endif %}
+  {% endfor %}
+</div>
+
+{% for block in section.blocks %}
+{% if product.handle == block.settings.theproduct %}
+
+<div class="ziz-related cf">
+  <h2>You may also like...</h2>
+  {% assign myTitle = product.title %}
+  {% for product in collections[block.settings.upsell].products limit: 4 %}
+    
+    {% unless  product.title == myTitle %}
+    <a href="{{ product.url }}" class="prod-box">
+      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="{{ product.featured_image.alt | escape }}">
+      <h1>{{ product.title }}</h1>
+    </a>
+    {% endunless %}
+
+  {% endfor %}
+</div>
+
+{% endif %}
+{% endfor %}
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

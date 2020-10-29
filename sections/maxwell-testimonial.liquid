@@ -1,0 +1,135 @@
+
+<div class="testimonials cf" style="background-color: {{ section.settings.bgcolor }}; position:relative;">
+  <div class="wrapper">
+    <h1 class="headers-custom" style="margin-bottom: 20px;">{{ section.settings.maintitle }}</h1>
+
+    <div class="testimonial-wrap">
+    <div class="testimonial">
+      <div class="testimonial-content">
+
+        <div class="t-img t-img1 waypoint" style="background: url('{{ section.settings.img1 | img_url: '600x' }}') center center; background-size: cover; z-index: 4; position: relative;">
+        </div>
+
+        <h2 class="waypoint fade-in">{{ section.settings.t1 }}</h2>
+        <h6>{{ section.settings.t1field }}</h6>
+        <p>{{ section.settings.tdesc1 }}</p>
+
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-content">
+
+        <div class="t-img t-img3 waypoint" style="background: url('{{ section.settings.img3 | img_url: '600x' }}') center center; background-size: cover; z-index: 4; position: relative;">
+        </div>
+
+        <h2 class="waypoint fade-in">{{ section.settings.t3 }}</h2>
+        <h6>{{ section.settings.t3field }}</h6>
+        <p>{{ section.settings.tdesc3 }}</p>
+
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-content">
+
+        <div class="t-img t-img2 waypoint" style="background: url('{{ section.settings.img2 | img_url: '600x' }}') center center; background-size: cover; z-index: 4; position: relative;">
+        </div>
+
+        <h2 class="waypoint fade-in">{{ section.settings.t2 }}</h6>
+        <h6>{{ section.settings.t2field }}</h6>
+        <p>{{ section.settings.tdesc2 }}</p>
+
+      </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Testimonials",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "Section bg color"
+      },
+      {
+        "type": "text",
+        "id": "maintitle",
+        "label": "main title"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Testimonial1 img"
+      },
+      {
+        "type": "text",
+        "id": "t1",
+        "label": "Testimonial1 title"
+      },
+      {
+        "type": "text",
+        "id": "t1field",
+        "label": "Testimonial1 field"
+      },
+      {
+        "type": "html",
+        "id": "tdesc1",
+        "label": "Testimonial 1 copy"
+      },
+      {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Testimonial2 img"
+      },
+      {
+        "type": "text",
+        "id": "t2",
+        "label": "Testimonial2 title"
+      },
+      {
+        "type": "text",
+        "id": "t2field",
+        "label": "Testimonial2 field"
+      },
+      {
+        "type": "html",
+        "id": "tdesc2",
+        "label": "Testimonial 2 copy"
+      },
+      {
+        "type": "image_picker",
+        "id": "img3",
+        "label": "Testimonial3 img"
+      },
+      {
+        "type": "text",
+        "id": "t3",
+        "label": "Testimonial3 title"
+      },
+      {
+        "type": "text",
+        "id": "t3field",
+        "label": "Testimonial3 field"
+      },
+      {
+        "type": "html",
+        "id": "tdesc3",
+        "label": "Testimonial 3 copy"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

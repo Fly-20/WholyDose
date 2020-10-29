@@ -1,0 +1,59 @@
+
+{% if section.settings.topbannerdesktop != blank %}
+<div class="homepage-banner">
+
+  <div class="banner top-banner desktop">
+    <a href="{{ section.settings.topbannerbtnlink }}">
+    <img class="new-banner-desktop" src="{{ section.settings.topbannerdesktop | img_url: '2000x' }}">
+    <img class="new-banner-mobile" src="{{ section.settings.topbannermobile | img_url: '1000x' }}">
+    </a>
+    {% if section.settings.topbannertitle != blank %}
+    <div class="vertical">
+      <h1 class="waypoint fade-in">{{ section.settings.topbannertitle }}</h1>
+      <p>{{ section.settings.topbannercopy }}</p>
+    </div>
+    {% endif %}
+  </div>
+
+</div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Top Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "topbannerdesktop",
+        "label": "Top Banner Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "topbannermobile",
+        "label": "Top Banner Mobile"
+      },
+      {
+        "type": "html",
+        "id": "topbannertitle",
+        "label": "Top Banner Title"
+      },
+      {
+        "type": "html",
+        "id": "topbannercopy",
+        "label": "Top Banner Copy"
+      },
+      {
+        "type": "url",
+        "id": "topbannerbtnlink",
+        "label": "Link Banner to?"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Top Banner",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
