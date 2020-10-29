@@ -45,10 +45,10 @@
 					{% endfor %}
 				</div>
 				<a href="{{ article.url }}">
-					<h4 class="custom-blog-title waypoint fade-in">{{ article.title }}</h4>
+					<h4 class="custom-blog-title waypoint fade-in bold-500">{{ article.title }}</h4>
 					<p>{{ article.excerpt }}</p>
 				</a>
-				<a class="read-more" href="{{ article.url }}">Read More <span class="icon icon-arrow-right"></span></a>
+              <a class="read-more bold-500" href="{{ article.url }}"><span class="underline">Read More </span><span class="icon icon-arrow-right"></span></a>
 			</div>
 		{% endfor %}
 	<div class="cf"></div>

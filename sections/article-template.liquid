@@ -5,21 +5,35 @@
   {% assign number_of_comments = article.comments_count | plus: 1 %}
 {% endif %}
 
-<div class="grid">
+<div class="grid padding-15-xs">
   <article class="grid__item large--five-sixths push--large--one-twelfth article" itemscope itemtype="http://schema.org/Article">
-
-    <header class="section-header text-center">
-      <h1>{{ article.title }}</h1>
-      <hr class="hr--small">
-      <p>
-        <span class="date"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></span>
-      </p>
-    </header>
 
     <div class="grid">
       <div class="grid__item large--four-fifths push--large--one-tenth">
-
-        <div class="rte rte--indented-images" itemprop="articleBody">
+        <div class="article-img-container">
+          {% assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+          <img class="article__featured-image lazyload"
+               src="{{ article.image | img_url: '300x300' }}"
+               data-src="{{ img_url }}"
+               data-widths="[310, 360, 480, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+               data-aspectratio="{{ article.image.aspect_ratio }}"
+               data-sizes="auto"
+               alt="{{ article.title | escape }}">
+        </div>
+    <header class="section-header">
+      <h1>{{ article.title }}</h1>
+      <!--<hr class="hr--small">-->
+      <p>
+        <span class="date no-margin"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></span>
+      </p>
+    </header>
+      </div>
+    </div>
+    <hr class="full light-grey">
+    <div class="grid">
+      <div class="grid__item large--four-fifths push--large--one-tenth">
+        
+        <div class="rte--indented-images" itemprop="articleBody">
           {{ article.content }}
         </div>
 
@@ -131,6 +145,21 @@
   </article>
 </div>
 
+{% if section.settings.upsellart != blank %}
+<br/><br/>
+<div class="wrapper">
+  <h2 style="text-align: center">{{ section.settings.upselltextart }}</h2>
+  <div class="new-collection-wrap" style="padding-bottom:15px;">
+    <div class="grid-uniform">
+      {% assign grid_item_width = 'small--one-half medium--one-half large--one-quarter' %}
+      {% for product in collections[section.settings.upsellart].products limit: 4 %}
+        {% include 'product-grid-item' %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
 <hr class="hr--medium hr--clear">
 <div class="text-center">
   <a href="{{ blog.url }}" class="return-link btn tan">&larr; {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
@@ -163,6 +192,16 @@
         "pt-BR": "Exibir botões de compartilhamento em redes sociais"
       },
       "default": true
+    },
+{
+     "id": "upselltextart",
+      "type": "html",
+      "label": "Text for upsell"
+    },
+    {
+      "id": "upsellart",
+      "type": "collection",
+      "label": "Choose an upsell Collection"
     }
   ]
 }

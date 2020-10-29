@@ -1,4 +1,5 @@
 
+<div class="new-page">
 
 {% comment %}<div class="page-banner">
   <img src="{{ section.settings.fullbanner | img_url: '3000x' }}" style="display:block; position: relative; " />
@@ -8,13 +9,14 @@
 </div>
 {% endcomment %}
 
-<h1 style="text-align:center; padding-top: 60px;">{{ section.settings.pagetitle }}</h1>
+<h1 class="page_title">{{ section.settings.pagetitle }}</h1>
+<hr class="full light-grey">
+  <div class="page-wysywig">
+<div class="faq-content-wrap faq-blocks cf grid"> 
 
-<div class="faq-content-wrap faq-blocks cf"> 
 
 
-
-  <div class="faq-block">
+  <div class="grid__item large--one-half">
     <h1>{{ section.settings.block1title }}</h1>
     {% comment %}<div class="divide"></div>{% endcomment %}
     {% for block in section.blocks %}
@@ -33,7 +35,7 @@
     
   </div>
 
-   <div class="faq-block odd ">
+   <div class="odd grid__item large--one-half">
     <h1>{{ section.settings.block2title }}</h1>
     {% comment %}<div class="divide"></div>{% endcomment %}
     {% for block in section.blocks %}
@@ -83,26 +85,25 @@
 
 </div>
 
-
 <div class="still cf">
   {{ section.settings.still }}
 </div>
-
-
-
-<div class="ziz-related cf" style="padding: 90px 0 60px;">
-  <h2 style="margin: 0; padding: 0; font-weight: 400;">{{ section.settings.upselltext }}</h2>
-  {% for product in collections[section.settings.upsell].products limit: 4 %}
-    
-    <a href="{{ product.url }}" class="prod-box">
-      <img src="{{ product.featured_image.src | img_url: '600x' }}" alt="{{ product.featured_image.alt | escape }}">
-      <h1>{{ product.title }}</h1>
-    </a>
-
-  {% endfor %}
+  </div>
+{% if section.settings.upsell != blank %}
+<br/><br/>
+<div class="wrapper">
+  <h2 style="text-align: center">{{ section.settings.upselltext }}</h2>
+  <div class="new-collection-wrap" style="padding-bottom:15px;">
+    <div class="grid-uniform">
+      {% assign grid_item_width = 'small--one-half medium--one-half large--one-quarter' %}
+      {% for product in collections[section.settings.upsell].products limit: 4 %}
+        {% include 'product-grid-item' %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
-
-
+{% endif %}
+</div>
 
 
 

@@ -3,34 +3,21 @@
 	{% for block in section.blocks %}
 
     <div class="carousel-cell">
-      <img class="medium--hide small--hide" src="{{ block.settings.img | img_url: 'master', scale:2 }}" alt="{{ block.settings.img.alt }}">
-      <img class="large--hide" src="{{ block.settings.mob_img | img_url: 'master', scale:2 }}" alt="{{ block.settings.img.alt }}">
       <h2>{{ block.settings.texttitle }}</h2>
-      <div class="rte">
+      <img src="{{ block.settings.img | img_url: '2000x' }}" alt="Wholy Dose Results - Skin Care Results">
+      <div style="padding: 30px 0;">
         {{ block.settings.text }}
       </div>
     </div>
 
 	{% endfor %}
   </div>
-  {% if section.settings.info_text != blank %}
-  <div class="info-text">
-    {{ section.settings.info_text }}
-  </div>
-  {% endif %}
 </div>
 
 
 {% schema %}
 {
   "name": "Results Slider",
-  "settings": [
-	{
-          "id": "info_text",
-          "type": "richtext",
-       		"label": "Information text"
-        }
-  ],
   "blocks": [
     {
       "type": "image",
@@ -39,12 +26,7 @@
         {
           "id": "img",
           "type": "image_picker",
-          "label": "Desktop img"
-        },
-		{
-          "id": "mob_img",
-          "type": "image_picker",
-          "label": "Mobile img"
+          "label": "Results img"
         },
         {
           "id": "texttitle",

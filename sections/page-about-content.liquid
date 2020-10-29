@@ -1,16 +1,22 @@
-<div class="wrapper">
-  <div class="page-text-center page-text-center--full-width">
-    <h1 class="subheaders-custom-3">{{ section.settings.contenttitle }}</h1>
-  </div>
-  <img src="{{ section.settings.img1  | img_url: '2000x' }}">
-</div>
+
 
 <div class="wrapper">
-  <div class="page-text-center">
-    <h1 class="subheaders-custom-3">{{ section.settings.content1toptitle }}</h1>
-    <div class="rte">{{ section.settings.content1toptext }}</div>
-  </div>
+<div class="page-text-center page-text-center--full-width">
+  <h1 class="subheaders-custom-3">{{ section.settings.contenttitle }}</h1>
 </div>
+<img src="{{ section.settings.img1  | img_url: '2000x' }}">
+</div>
+
+
+<div class="wrapper">
+<div class="page-text-center">
+  <h1 class="subheaders-custom-3">{{ section.settings.content1toptitle }}</h1>
+  <p>{{ section.settings.content1topcopy }}</p>
+</div>
+</div>
+
+
+
 
 <div class="page-blocks">
   <h1 class="subheaders-custom-3">{{ section.settings.content1title }}</h1>
@@ -20,7 +26,7 @@
     </div>
     <div class="page-block">
       <div class="content">
-        {{ section.settings.content1 }}
+       {{ section.settings.content1 }}
       </div>
     </div>
     <div class="page-block hidden-xs">
@@ -29,19 +35,23 @@
   </div>
 </div>
 
+
+
 <div class="page-blocks">
   <h1 class="subheaders-custom-3">{{ section.settings.content2title }}</h1>
   <div class="wrapper cf">
+
+    
     <div class="page-block">
       <img src="{{ section.settings.block2 | img_url: '2000x' }}">
     </div>
     <div class="page-block">
       <div class="content">
-        {{ section.settings.content2 }}
+       {{ section.settings.content2 }}
       </div>
     </div>
 
-    <div class="content-text">
+   <div class="content-text">
       {{ section.settings.content3 }}
     </div>
   </div>
@@ -51,7 +61,6 @@
 {% schema %}
 {
   "name": "About Page extra content ",
-  "class": "page-about-content",
   "settings": [
     {
       "type": "html",
@@ -69,10 +78,9 @@
       "label": "content 1 title"
     },
     {
-      "type": "richtext",
-      "id": "content1toptext",
-      "label": "content 1 text",
-	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      "type": "html",
+      "id": "content1topcopy",
+      "label": "content 1 copy"
     },
     {
       "id": "block1",
@@ -85,10 +93,9 @@
       "label": "content 1 title"
     },
     {
-      "type": "richtext",
+      "type": "html",
       "id": "content1",
-      "label": "content 1 text",
-	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      "label": "content 1"
     },
     {
       "id": "block2",
@@ -101,16 +108,14 @@
       "label": "content 2 title"
     },
     {
-      "type": "richtext",
+      "type": "html",
       "id": "content2",
-      "label": "content 2",
-	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      "label": "content 2"
     },
     {
-      "type": "richtext",
+      "type": "html",
       "id": "content3",
-      "label": "content 3",
-	  "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      "label": "content 3"
     }
   ]
 }

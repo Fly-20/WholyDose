@@ -6,7 +6,7 @@
     </div>
 
     <!-- Flickity HTML init -->
-    <div class="carousel results-slider">
+    <div class="carousel results-slider" data-flickity>
       {% if section.settings.slide1  != blank %}
       <div class="carousel-cell">
         <img src="{{ section.settings.slide1  | img_url: '1200x'  }}" />

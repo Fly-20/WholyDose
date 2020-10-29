@@ -2,10 +2,10 @@
 	{% for block in section.blocks %}
 		{% case block.type %}
 			{% when 'text' %}
-            <div class="results-block-text">
-              <h1 class="subheaders-custom-3">{{ block.settings.texttitle }}</h1>
-              <div class="rte">{{ block.settings.text }}</div>
-            </div>
+				<div class="results-block-text">
+          <h1 class="subheaders-custom-3">{{ block.settings.texttitle }}</h1>
+					{{ block.settings.text }}
+				</div>
 			{% when 'title' %}
 				<h2 class="results-block-title">{{ block.settings.title }}</h2>
 			{% when 'one_image' %}
@@ -29,7 +29,6 @@
 {% schema %}
 {
   "name": "Results Content",
-  "class": "page-result-content",
   "blocks": [
     {
       "type": "text",

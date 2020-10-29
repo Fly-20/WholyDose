@@ -1,128 +1,133 @@
+
 <div class="wrapper">
-  <div class="page-text-center">
-    <h1 class="subheaders-custom-3">{{ section.settings.content1title }}</h1>
-    <div class="rte">{{ section.settings.content1copy }}</div>
-  </div>
+<div class="page-text-center">
+	<h1 class="subheaders-custom-2">{{ section.settings.content1title }}</h1>
+	<p>{{ section.settings.content1copy }}</p>
+</div>
 </div>
 
 <div class="wrapper">
-  <div class="new-ingredients-blocks">
-    <div class="i-block">
-      <img src="{{ section.settings.icon1 | img_url: '600x' }}" >
-      <h3 class="ingredient-text">{{ section.settings.icontitle1 }}</h3>
-      <div class="ingredients-icon-text">{{ section.settings.icontext1 }}</div>
-      <a class="ingredient-link" href="{{ section.settings.link1 }}">{{ section.settings.link_label1 }}</a>
-    </div>
-    <div class="i-block">
-      <img src="{{ section.settings.icon2 | img_url: '600x' }}" >
-      <h3 class="ingredient-text">{{ section.settings.icontitle2 }}</h3>
-      <div class="ingredients-icon-text">{{ section.settings.icontext2 }}</div>
-      <a class="ingredient-link" href="{{ section.settings.link2 }}">{{ section.settings.link_label2 }}</a>
-    </div>
-    <div class="i-block">
-      <img src="{{ section.settings.icon3 | img_url: '600x' }}" >
-      <h3 class="ingredient-text">{{ section.settings.icontitle3 }}</h3>
-      <div class="ingredients-icon-text">{{ section.settings.icontext3 }}</div>
-      <a class="ingredient-link" href="{{ section.settings.link3 }}">{{ section.settings.link_label3 }}</a>
-    </div>
-  </div>
+<div class="new-ingredients-blocks">
+	<div class="i-block">
+		<img src="{{ section.settings.icon1 | img_url: '600x' }}" >
+		<h3 class="subheaders-custom ingredient-text">{{ section.settings.icontitle1 }}</h3>
+		<div class="ingredients-icon-text">{{ section.settings.icontext1 }}</div>
+	</div>
+	<div class="i-block">
+		<img src="{{ section.settings.icon2 | img_url: '600x' }}" >
+		<h3 class="subheaders-custom ingredient-text">{{ section.settings.icontitle2 }}</h3>
+		<div class="ingredients-icon-text">{{ section.settings.icontext2 }}</div>
+	</div>
+	<div class="i-block">
+		<img src="{{ section.settings.icon3 | img_url: '600x' }}" >
+		<h3 class="subheaders-custom ingredient-text">{{ section.settings.icontitle3 }}</h3>
+		<div class="ingredients-icon-text">{{ section.settings.icontext3 }}</div>
+	</div>
+</div>
 </div>
 
-<div class="wrapper">
-  <div class="page-text-center medium-content">
-    <h1 class="subheaders-custom-2">{{ section.settings.content2title }}</h1>
-    <div class="rte">{{ section.settings.content2copy }}</div>
-  </div>
-</div>
 
 <div class="wrapper">
-  <div class="superfood-blocks">
-    <div class="s-block">
-      <img src="{{ section.settings.icon4 | img_url: '600x' }}" >
-      <div class="thecopy">
-        <h3>{{ section.settings.icontitle4 }}</h3>
-        <div class="ingredients-icon-text">{{ section.settings.icontext4 }}</div>
-      </div>
-    </div>
-    <div class="s-block">
-      <img src="{{ section.settings.icon5 | img_url: '600x' }}" >
-      <div class="thecopy">
-        <h3>{{ section.settings.icontitle5 }}</h3>
-        <div class="ingredients-icon-text">{{ section.settings.icontext5 }}</div>
-      </div>
-    </div>
-  </div>
+<div class="page-text-center">
+	<h1 class="subheaders-custom-2">{{ section.settings.content2title }}</h1>
+	<p>{{ section.settings.content2copy }}</p>
+</div>
+</div>
+
+
+
+<div class="wrapper">
+<div class="superfood-blocks">
+	<div class="s-block">
+		<img src="{{ section.settings.icon4 | img_url: '600x' }}" >
+		<div class="thecopy">
+		<h3>{{ section.settings.icontitle4 }}</h3>
+		<div class="ingredients-icon-text">{{ section.settings.icontext4 }}</div>
+		</div>
+	</div>
+	<div class="s-block">
+		<img src="{{ section.settings.icon5 | img_url: '600x' }}" >
+		<div class="thecopy">
+		<h3>{{ section.settings.icontitle5 }}</h3>
+		<div class="ingredients-icon-text">{{ section.settings.icontext5 }}</div>
+		</div>
+	</div>
+</div>
 </div>
 
 <div class="bottom-icons">
-  <div class="wrapper">
-    <h1 class="subheaders-custom-3">{{ section.settings.bottomtitle }}</h1>
-    <div class="rte">{{ section.settings.bottomtext }}</div>
-  </div>
-  <div class="wrapper wrapper--icons">
-    <div class="icon">
-      <img src="{{ section.settings.i1 | img_url: '300x' }}" >
-      <p>{{ section.settings.i1c }}</p>
-    </div>
-    <div class="icon">
-      <img src="{{ section.settings.i2 | img_url: '300x' }}" >
-      <p>{{ section.settings.i2c }}</p>
-    </div>
-    <div class="icon">
-      <img src="{{ section.settings.i3 | img_url: '300x' }}" >
-      <p>{{ section.settings.i3c }}</p>
-    </div>
-    <div class="icon">
-      <img src="{{ section.settings.i4 | img_url: '300x' }}" >
-      <p>{{ section.settings.i4c }}</p>
-    </div>
-    <div class="icon">
-      <img src="{{ section.settings.i5 | img_url: '300x' }}" >
-      <p>{{ section.settings.i5c }}</p>
-    </div>
-    <div class="icon">
-      <img style="margin-top: -15px;" src="{{ section.settings.i6 | img_url: '300x' }}" >
-      <p>{{ section.settings.i6c }}</p>
-    </div>
-  </div>
+	<div class="wrapper">
+			<h1 class="subheaders-custom-2">{{ section.settings.bottomtitle }}</h1>
+			<p>{{ section.settings.bottomtext }}</p>
+	</div>
+	<div class="wrapper wrapper--icons">
+		<div class="icon">
+			<img src="{{ section.settings.i1 | img_url: '300x' }}" >
+			<p>{{ section.settings.i1c }}</p>
+		</div>
+		<div class="icon">
+			<img src="{{ section.settings.i2 | img_url: '300x' }}" >
+			<p>{{ section.settings.i2c }}</p>
+		</div>
+		<div class="icon">
+			<img src="{{ section.settings.i3 | img_url: '300x' }}" >
+			<p>{{ section.settings.i3c }}</p>
+		</div>
+		<div class="icon">
+			<img src="{{ section.settings.i4 | img_url: '300x' }}" >
+			<p>{{ section.settings.i4c }}</p>
+		</div>
+		<div class="icon">
+			<img src="{{ section.settings.i5 | img_url: '300x' }}" >
+			<p>{{ section.settings.i5c }}</p>
+		</div>
+		<div class="icon">
+			<img style="margin-top: -15px;" src="{{ section.settings.i6 | img_url: '300x' }}" >
+			<p>{{ section.settings.i6c }}</p>
+		</div>
+	</div>
 </div>
 
+
+
+
+
 {% for block in section.blocks %}
-  <div class="ingredients-block cf">
-    <div class="wrapper">
-      <h2 class="ingredients-section-title text-center">{{ block.settings.title }}</h2>
-      <div class="ingredients-icons text-center cf">
-        <div class="ingredients-col-icon">
-          <img src="{{ block.settings.icon1 | img_url: '300x' }}" class="ingredients-icon-image">
-          <h4>{{ block.settings.icontitle1 }}</h4>
-          <div class="ingredients-icon-text">{{ block.settings.icontext1 }}</div>
-        </div>
-        <div class="ingredients-col-icon">
-          <img src="{{ block.settings.icon2 | img_url: '300x' }}" class="ingredients-icon-image">
-          <h4>{{ block.settings.icontitle2 }}</h4>
-          <div class="ingredients-icon-text">{{ block.settings.icontext2 }}</div>
-        </div>
-        <div class="ingredients-col-icon">
-          <img src="{{ block.settings.icon3 | img_url: '300x' }}" class="ingredients-icon-image">
-          <h4>{{ block.settings.icontitle3 }}</h4>
-          <div class="ingredients-icon-text">{{ block.settings.icontext3 }}</div>
-        </div>
-        <div class="ingredients-col-icon">
-          <img src="{{ block.settings.icon4 | img_url: '300x' }}" class="ingredients-icon-image">
-          <h4>{{ block.settings.icontitle4 }}</h4>
-          <div class="ingredients-icon-text">{{ block.settings.icontext4 }}</div>
-        </div>
-      </div>
-      <div class="ingredients-content">
-        <div class="ingredients-col-left">
-          {{ block.settings.leftcolumn }}
-        </div>
-        <div class="ingredients-col-right">
-          {{ block.settings.rightcolumn }}
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="ingredients-block cf">
+		<div class="wrapper">
+			<h2 class="ingredients-section-title text-center">{{ block.settings.title }}</h2>
+			<div class="ingredients-icons text-center cf">
+				<div class="ingredients-col-icon">
+					<img src="{{ block.settings.icon1 | img_url: '300x' }}" class="ingredients-icon-image">
+					<h4>{{ block.settings.icontitle1 }}</h4>
+					<div class="ingredients-icon-text">{{ block.settings.icontext1 }}</div>
+				</div>
+				<div class="ingredients-col-icon">
+					<img src="{{ block.settings.icon2 | img_url: '300x' }}" class="ingredients-icon-image">
+					<h4>{{ block.settings.icontitle2 }}</h4>
+					<div class="ingredients-icon-text">{{ block.settings.icontext2 }}</div>
+				</div>
+				<div class="ingredients-col-icon">
+					<img src="{{ block.settings.icon3 | img_url: '300x' }}" class="ingredients-icon-image">
+					<h4>{{ block.settings.icontitle3 }}</h4>
+					<div class="ingredients-icon-text">{{ block.settings.icontext3 }}</div>
+				</div>
+				<div class="ingredients-col-icon">
+					<img src="{{ block.settings.icon4 | img_url: '300x' }}" class="ingredients-icon-image">
+					<h4>{{ block.settings.icontitle4 }}</h4>
+					<div class="ingredients-icon-text">{{ block.settings.icontext4 }}</div>
+				</div>
+			</div>
+			<div class="ingredients-content">
+				<div class="ingredients-col-left">
+					{{ block.settings.leftcolumn }}
+				</div>
+				<div class="ingredients-col-right">
+					{{ block.settings.rightcolumn }}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endfor %}
 
 
@@ -131,18 +136,16 @@
 
 {% schema %}
 {
-	"name": "About Page extra content ",
-	"class": "page-ingredients-content",
 	"settings": [
 		{
       "id": "content1title",
-      "type": "text",
+      "type": "richtext",
    		"label": "content 1 Title"
     },
     {
       "id": "content1copy",
       "type": "richtext",
-   	  "label": "content 1 text"
+   		"label": "content 1 copy"
     },
 	  {
       "id": "title",
@@ -164,16 +167,6 @@
       "type": "richtext",
    		"label": "Icon Text 1"
     },
-	{
-      "type": "text",
-      "id": "link_label1",
-      "label": "Button Text"
-    },
-	{
-      "type": "url",
-      "id": "link1",
-      "label": "Link to Button"
-    },
     {
       "id": "icon2",
       "type": "image_picker",
@@ -189,16 +182,6 @@
       "type": "richtext",
    		"label": "Icon Text 2"
     },
-	{
-      "type": "text",
-      "id": "link_label2",
-      "label": "Button Text"
-    },
-	{
-      "type": "url",
-      "id": "link2",
-      "label": "Link to Button"
-    },
     {
       "id": "icon3",
       "type": "image_picker",
@@ -213,16 +196,6 @@
       "id": "icontext3",
       "type": "richtext",
    		"label": "Icon Text 3"
-    },
-	{
-      "type": "text",
-      "id": "link_label3",
-      "label": "Button Text"
-    },
-	{
-      "type": "url",
-      "id": "link3",
-      "label": "Link to Button"
     },
     {
     	"type": "header",
@@ -274,7 +247,7 @@
     },
     {
       "id": "bottomtitle",
-      "type": "text",
+      "type": "richtext",
    		"label": "bottom Title"
     },
     {

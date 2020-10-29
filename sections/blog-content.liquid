@@ -4,14 +4,17 @@
 <div class="wrapper">
 	<div class="blog-featured-post">
 		<div class="featured-blog-col">
+          <a href="{{ article.url }}">
 			<div class="featured-post-img" style="background: url('{{ article.image | img_url: '720x' }}') no-repeat center center; background-size: cover;"></div>
+          </a>
 		</div>
 		<div class="featured-blog-col contentcol">
 			
 			<h6>FEATURED POST</h6>
-			<h2>{{ article.title }}</h2>
+          <a href="{{ article.url }}"> <h2 class="custom-blog-title waypoint fade-in bold-500">{{ article.title }}</h4>
+			
 			<p>{{ article.excerpt }}</p>
-			<a class="read-more" href="{{ article.url }}">Read More <span class="icon icon-arrow-right"></span></a>
+            <a class="read-more bold-500" href="{{ article.url }}"><span class="underline">Read More </span><span class="icon icon-arrow-right"></span></a>
 			
 		</div>
 	</div>

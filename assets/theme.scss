@@ -492,11 +492,11 @@ $accentFontStyle: normal;
 
 @font-face {
   font-family: 'icons';
-  src: url('//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/icons.eot?v=7724070712136770586');
-  src: url('//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/icons.eot?v=7724070712136770586#iefix') format("embedded-opentype"),
-       url('//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/icons.woff?v=15743527235125733377') format("woff"),
-       url('//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/icons.ttf?v=17626037986604397421') format("truetype"),
-       url('//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/icons.svg?v=3525525708295100587#timber-icons') format("svg");
+  src: url('//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/icons.eot?v=7724070712136770586');
+  src: url('//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/icons.eot?v=7724070712136770586#iefix') format("embedded-opentype"),
+       url('//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/icons.woff?v=15743527235125733377') format("woff"),
+       url('//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/icons.ttf?v=17626037986604397421') format("truetype"),
+       url('//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/icons.svg?v=3525525708295100587#timber-icons') format("svg");
   font-weight: normal;
   font-style: normal;
 };
@@ -2363,7 +2363,7 @@ $slick-opacity-not-active: 0.25;
 
 // Only called once so make sure proper file is grabbed
 @function slick-image-url($url) {
-  @return url(//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/ajax-loader.gif?v=4135686330247201572);
+  @return url(//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/ajax-loader.gif?v=4135686330247201572);
 }
 
 // Unused intentionally
@@ -3896,7 +3896,7 @@ button.mfp-arrow {
   width: 100%;
 
   @if $passwordPageUseBgImage {
-    background-image: url(//cdn.shopify.com/s/files/1/0268/0055/4170/t/3/assets/password-page-background.jpg?v=12987344696580752000);
+    background-image: url(//cdn.shopify.com/s/files/1/0503/4947/3943/t/4/assets/password-page-background.jpg?v=12987344696580752000);
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
